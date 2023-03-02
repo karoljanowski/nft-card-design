@@ -1,0 +1,101 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--color-backgroud);
+}
+
+#home-page {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.content {
+  max-width: 413px;
+  color: var(--color-title);
+  margin: 1em;
+  background-color: var(--color-box);
+  border-radius: 20px;
+  overflow: hidden;
+
+
+  .description {
+    background: linear-gradient(180deg, rgba(19, 36, 59, 0) 0%, rgba(19, 36, 59, 0.75) 50%, rgba(19, 36, 59, 1) 100%), url(https://s3-alpha-sig.figma.com/img/2c46/642c/a736006b61a35dfa736b31711c594094?Expires=1678665600&Signature=C9CcHpNh-2685fQGr1R2PdTY4QwdkKM5rvqT6bVrGbkJ~aO3umKoOQFwT3jI2OkWrMJrrYG5Zb-FnHVuCTi0yyyoXvYvEHUe~JfumiDMQITpZUp4z25xoYRVeSdIzRwJn7zN4Lh-OPhRvyxVTRm8sEzlKLsgiGu2OeQptUbArukQ9J7Ipo6i5loKYBzQrCp9hLUcatb3-Uc87ip9XtSYjU1JHQtDg7ukr8OAnNUTUTTPQL-McXjS8bekaSbUSIT9XSrZjciuQI0vRiq5ACzVC4gjKvp0oCpyiiaaiNUVILIgSHSW3kug7eB-WWJkej66ta761AArtHselL3E6ne2hw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: center 60%;
+    padding: 14em 3em 1em 1.5em;
+
+    h2 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-weight: 500;
+      color: var(--color-body);
+      font-size: 1.125rem;
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    margin: 1.5em;
+    border-bottom: 1px solid var(--color-stroke);
+
+    .gem,
+    .time {
+      display: flex;
+      align-items: center;
+      gap: 0.5em
+    }
+
+    .gem {
+      color: var(--color-primary);
+    }
+
+    .time {
+      color: var(--color-body);
+    }
+  }
+
+  .creator {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+
+    img {
+      width: 40px;
+      border-radius: 50%;
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 600;
+
+      span {
+        font-weight: 500;
+        color: var(--color-body);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .content {
+    .description {
+      padding: 17em 3em 1em 1.5em;
+    }
+  }
+}
