@@ -1,2 +1,146 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
+/// 
+/// 
+#home-page {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  
+  .card {
+    max-width: 343px;
+    color: var(--color-title);
+    margin: 1em;
+    background-color: var(--color-box);
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 486px;
+  
+    & &__description {
+        background: linear-gradient(180deg, rgba(19, 36, 59, 0) 0%, rgba(19, 36, 59, 0.75) 50%, rgba(19, 36, 59, 1) 100%),
+         url(https://s3-alpha-sig.figma.com/img/2c46/642c/a736006b61a35dfa736b31711c594094?Expires=1678665600&Signature=C9CcHpNh-2685fQGr1R2PdTY4QwdkKM5rvqT6bVrGbkJ~aO3umKoOQFwT3jI2OkWrMJrrYG5Zb-FnHVuCTi0yyyoXvYvEHUe~JfumiDMQITpZUp4z25xoYRVeSdIzRwJn7zN4Lh-OPhRvyxVTRm8sEzlKLsgiGu2OeQptUbArukQ9J7Ipo6i5loKYBzQrCp9hLUcatb3-Uc87ip9XtSYjU1JHQtDg7ukr8OAnNUTUTTPQL-McXjS8bekaSbUSIT9XSrZjciuQI0vRiq5ACzVC4gjKvp0oCpyiiaaiNUVILIgSHSW3kug7eB-WWJkej66ta761AArtHselL3E6ne2hw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+        background-repeat: no-repeat;
+        background-position: center 120%;
+        background-size: 135%;
+        height: 410px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: stretch;
+        padding-inline: 1.5em;
+    }
+    & &__title {
+        font-weight: 600;
+        font-size: 24px;
+        margin: 0.5em 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+
+    & &__subtitle {
+        font-weight: 500;
+        color: var(--color-body);
+        font-size: 1.125rem;
+        line-height: 28.8px;
+        padding: 0.2em 0;
+        letter-spacing: -0.18px;
+    }
+    & &__info {
+        display: flex;
+        justify-content: flex-start;
+        gap: 84px;
+        border-bottom: 1px solid var(--color-stroke);
+        padding: 1.5em 0;
+        padding-bottom: 25px;
+    }
+    & &__time {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--color-body);
+        font-size: 0.875rem;
+        letter-spacing: -0.0.5px;
+
+    }
+    & &__gem {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        color: var(--color-primary);
+    }
+
+    & &__creator {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin: 1em;
+        margin-left: 1.5em;
+
+    }
+    & &__image {
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    & &__creator-name {
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: -0.14px;
+
+        span {
+        font-weight: 500;
+        color: var(--color-body);
+        }
+    }
+    @media screen and (max-width: 350px) {
+        & &__info {
+            justify-content: center;
+            gap: 30px;
+        }
+        & &__description{
+            background-size: cover;
+        }
+
+    }
+    @media screen and (min-width: 960px) {
+        max-width: 413px;
+        min-height: 556px;
+        & &__description{
+            height: 468px;
+            background-size: 111%;
+            background-position: center -62px
+        }
+        & &__creator-name {
+            font-size: 1rem;
+        }
+        & &__creator {
+            margin: 1.5em;
+            margin-left: 2em;
+
+        }
+        & &__info {
+            gap: 129px;
+            padding: 2em 0;
+            justify-content: center;
+        }
+        & &__gem{
+            font-size: 1.125rem;
+        }
+        & &__time{
+            font-size: 1rem;
+        }
+        & &__subtitle{
+            width: 70%;
+            padding: 0.6em 0.4em;
+        }
+        & &__title{
+            margin: 0.6em 0.3em;
+        }
+    }
+    }
+
+
